@@ -9,7 +9,7 @@ window.onload=function (){
     var mint=0;
 
 
-   // var lastw=document.getElementById("texty")
+   var lastw=document.getElementById("texty")
    // var btn=document.getElementById("btn")
     var chsec=document.getElementById("chsec")
     var chmint=document.getElementById("chmint")
@@ -72,25 +72,26 @@ var amt=0
         if(this.className!="open" && this.className!="usd"){
 
             this.className="open"
-            x=this.dataset.item;
-            resarr.push(x)
+            th=this.dataset.item;
+            resarr.push(th)
             clearInterval(inter)
             inter=setInterval(timerst,10)
 
         }
         if (resarr.length>1){
 
-            if(resarr[0]==resarr[1]){
-                iscorrect("usd")
+            if(resarr[0]===resarr[1]){
+
+                iscorrect("usd");
                 //score+=5
                 amt++
-                endy();
-                resarr=[]
+               endy();
+                resarr=[];
             }
             else{
-              
-                iscorrect("nous")
-                resarr=[]
+
+                iscorrect("nous");
+                resarr=[];
             }
         }
         }
@@ -111,7 +112,7 @@ var amt=0
         },500);
     }
 
-scored.innerHTML=score;
+
 
      var endy=function (){
         if(amt===8){
@@ -145,3 +146,4 @@ scored.innerHTML=score;
 
     }
 }
+scored.innerHTML=score;

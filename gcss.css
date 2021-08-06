@@ -92,7 +92,7 @@ button{
 
 
 .nous{
-    transition: 0.6s;
+    transition: 0s;
     transform-style: preserve-3d;
     position: relative;
     transform: rotateY(180deg);
