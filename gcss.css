@@ -28,15 +28,20 @@ body{
 
 
 div[data-view="image"] {
-    width: 110px;
-    height: 145px;
-    border: solid 1px #d3cece;
-    border-radius: 5px;
+
+    width: 130px;
+    height: 160px;
+    border: solid 3px white;
+    border-radius: 10px;
     float: left;
-    margin: 10px;
+    margin: 11px;
     cursor: pointer;
-    background-size: 64px 128px;
-    background-image: url("");
+
+
+    background-image: url("./images/pawbgi.jpg")  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .open {
@@ -54,10 +59,11 @@ div[data-view="image"] {
 }
 
 .mainp{
-    margin: 100px 500px 100px 500px;
+    margin: 10px 500px 100px 500px;
+    padding: 0px 0px 0px 100px;
     background-color: #e8adad;
-    height: 700px;
-    width: 900px;
+    height: 900px;
+    width: 750px;
 
 }
 
