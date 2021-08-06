@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'Permanent Marker', cursive; /* Имя шрифта */
+    src: url(/fonts/PermanentMarker-Regular.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'Shadows into light';
+    src: url(/fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+h1{
+    font-family: "Shadows into light";
+    color: white;
+    font-size: 45px;
+    text-align: center;
+}
+
+body{
+    background-color: #dfe5f5;
+}
+
+.mainp{
+    margin: 100px 500px 100px 500px;
+    background-color: #94a9e7;
+    height: 700px;
+    width: 900px;
+
+}

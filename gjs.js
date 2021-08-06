@@ -37,9 +37,7 @@ fysh(allim)
 
 var amt=0
 
-    btn.onclick=function (){
-    var inter=setInterval(timerst,10)
-    }
+
 
 //creating set of images
     for (var j = 0; j < imarr.length; j++) {
@@ -47,6 +45,8 @@ var amt=0
         openi.dataset.item = cards[i];
        // openi.dataset.view = "card";
        resarr.appendChild(openi)
+        clearInterval(inter)
+        var inter=setInterval(timerst,10)
 
         openi.onclick=function (){
         if(this.className!="open" && this.className!="usd"){
