@@ -13,31 +13,37 @@ window.onload=function (){
    // var btn=document.getElementById("btn")
     var chsec=document.getElementById("chsec")
     var chmint=document.getElementById("chmint")
-
+    var scored=document.getElementById("score")
     var sarr=document.getElementById('iset')
 
     var resarr=[]
 
     var images = [
         'img1',
-        'img2',
+        'img7',
         'img3',
         'img4',
         'img5',
         'img6',
-       ' img7',
-       'img8'
+       'img2',
+       'img8',
+
     ];
 
 
 
-    // Fisher–Yates shuffle
-    function fysh(objs){
-    for(let i=objs.length-1;i>0;i--){
+
+  /*  function fysh(objs){
+    for(let i=objs.length-1;i>=0;i--){
         let randp=Math.ceil(Math.random()*(i+1));
         [objs[i],objs[randp]=objs[randp],objs[i]];
     }
     return objs;
+    }*/
+
+    function fysh(objs){
+        for(var j, x, i = objs.length; i; j = Math.floor(Math.random() * i), x = objs[--i],   objs[i] = objs[j], objs[j] = x);
+        return objs;
     }
 
 
@@ -62,23 +68,28 @@ var amt=0
         sarr.appendChild(openi)
 
         openi.onclick=function (){
-            alert("Helli")
+
         if(this.className!="open" && this.className!="usd"){
+
             this.className="open"
-            resarr.push(this.dataset.item)
+            x=this.dataset.item;
+            resarr.push(x)
             clearInterval(inter)
             inter=setInterval(timerst,10)
 
         }
-        if (resarr.length>=2){
-            if(resarr[0]===resarr[1]){
+        if (resarr.length>1){
+
+            if(resarr[0]==resarr[1]){
                 iscorrect("usd")
+                //score+=5
                 amt++
                 endy();
                 resarr=[]
             }
             else{
-                iscorrect("nousd")
+              
+                iscorrect("nous")
                 resarr=[]
             }
         }
@@ -88,17 +99,19 @@ var amt=0
 
 
     var iscorrect=function (state){
-        var samples=document.getElementsByClassName("open");;
+
+        var samples=document.getElementsByClassName("open");
         setTimeout(function() {
 
-            for(var i = samples.length; i >0; i--) {
-                resarr[i].className = state;
+            for(var i = (samples.length-1); i >=0; i--) {
+                samples[i].className = state;
+
             }
 
         },500);
     }
 
-
+scored.innerHTML=score;
 
      var endy=function (){
         if(amt===8){

@@ -12,14 +12,16 @@ h1{
     font-size: 45px;
     text-align: center;
 }
-/*#iset{
-    width: 200px;
-    height: 200px;
-    background-color: yellow;
-    background-size: 64px 128px;
-    color: red;
+#iset{
+    width: 700px;
 }
-*/
+    #iset::after {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+
 
 body{
     background-color: #f5dfdf;
@@ -50,6 +52,14 @@ div[data-view="image"] {
     position: relative;
     transform: rotateY(0deg);
 }
+.nousd {
+    transition: 0.6s;
+    opacity: 0.1;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+}
+
 
 .usd {
     transition: 0.6s;
@@ -79,3 +89,82 @@ button{
     width:180px;
     margin: 10px;
     outline: none}
+
+
+.nous{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+}
+.usd {
+    opacity: .5;
+    cursor: default;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+
+
+.open[data-item="img2"]{
+    background-image:url("./images/im2.jpg");
+
+}
+.open[data-item="img1"]{
+    background-image:url("./images/im1.jpg");
+
+}
+.open[data-item="img3"]{
+    background-image:url("./images/im3.jpg");
+
+}
+.open[data-item="img4"]{
+    background-image:url("./images/im4.jpg");
+
+}
+
+.open[data-item="img5"]{
+    background-image:url("./images/im5.jpg");
+
+}
+.open[data-item="img6"]{
+    background-image:url("./images/im6.jpg");
+
+}
+.open[data-item="img7"]{
+    background-image:url("./images/im7.jpg");
+
+}
+.open[data-item="img8"]{
+
+    background-image:url("./images/im8.jpg")
+}
+
+
+.usd[data-item="img5"]{
+    background-image:url("./images/im5.jpg")
+}
+.usd[data-item="img7"]{
+    background-image:url("./images/im7.jpg")
+}
+.usd[data-item="img6"]{
+    background-image:url("./images/im6.jpg")
+}
+.usd[data-item="img2"]{
+    background-image:url("./images/im2.jpg")
+}
+.usd[data-item="img8"]{
+    background-image:url("./images/im8.jpg")
+}
+
+
+.usd[data-item="img1"]{
+    background-image:url("./images/im1.jpg")
+}
+.usd[data-item="img3"]{
+    background-image:url("./images/im3.jpg")
+}
+.usd[data-item="img4"]{
+    background-image:url("./images/im4.jpg")
+}
