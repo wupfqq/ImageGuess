@@ -15,7 +15,7 @@ h1{
     padding: 0;
 }
 
-
+.t
 
 body{
     background-color: #f5dfdf;
@@ -25,7 +25,7 @@ body{
 
 p{
      color: #fff4f4;
-     font-size: 90px;
+     font-size: 60px;
      text-align: center;
      font-family: "Shadows into light";
 
@@ -78,21 +78,10 @@ div[data-view="image"] {
     background-color: #e8adad;
     height: 1000px;
     width: 750px;
+    border: solid 4px #fff4f4;
+    border-radius: 20px;
 
 }
-
-button{
-
-    background:red;
-    color:white;
-    border: solid 1px white;
-    text-decoration:none;
-    cursor:pointer;
-    font-size:1.2em;
-    padding:18px 10px;
-    width:180px;
-    margin: 10px;
-    outline: none}
 
 
 .nous{
@@ -101,7 +90,7 @@ button{
 
 }
 .usd {
-    opacity: .5;
+
     cursor: default;
     transform-style: preserve-3d;
 
