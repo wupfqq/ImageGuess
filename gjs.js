@@ -1,23 +1,32 @@
 //use Timer from TimerProj
 
 window.onload=function (){
+
+
+
+    var inter=0;
     var sec=0;
     var mint=0;
-    var lastw=document.getElementById("texty")
-    var btn=document.getElementById("btn")
+
+
+   // var lastw=document.getElementById("texty")
+   // var btn=document.getElementById("btn")
     var chsec=document.getElementById("chsec")
     var chmint=document.getElementById("chmint")
-    var resarr=document.getElementById('iset')
+
+    var sarr=document.getElementById('iset')
+
     var resarr=[]
+
     var images = [
-        img1,
-        img2,
-        img3,
-        img4,
-        img5,
-        img6,
-        img7,
-        ing8
+        'img1',
+        'img2',
+        'img3',
+        'img4',
+        'img5',
+        'img6',
+       ' img7',
+       'img8'
     ];
 
 
@@ -31,6 +40,8 @@ window.onload=function (){
     return objs;
     }
 
+
+
 var imarr = images.slice(0);
 var allim = images.concat(imarr);
 fysh(allim)
@@ -40,24 +51,30 @@ var amt=0
 
 
 //creating set of images
-    for (var j = 0; j < imarr.length; j++) {
-        openi = document.createElement('div');
-        openi.dataset.item = cards[i];
-       // openi.dataset.view = "card";
-       resarr.appendChild(openi)
-        clearInterval(inter)
-        var inter=setInterval(timerst,10)
+    for (var j = 0; j < allim.length; j++) {
+
+
+        var openi = document.createElement('div');
+
+        openi.dataset.item = allim[j];
+        openi.dataset.view = "image";
+
+        sarr.appendChild(openi)
 
         openi.onclick=function (){
+            alert("Helli")
         if(this.className!="open" && this.className!="usd"){
-            resarr.push(this.dataset.item)
             this.className="open"
+            resarr.push(this.dataset.item)
+            clearInterval(inter)
+            inter=setInterval(timerst,10)
+
         }
         if (resarr.length>=2){
             if(resarr[0]===resarr[1]){
                 iscorrect("usd")
                 amt++
-                win()
+                endy();
                 resarr=[]
             }
             else{
@@ -71,11 +88,11 @@ var amt=0
 
 
     var iscorrect=function (state){
-     var samples;
+        var samples=document.getElementsByClassName("open");;
         setTimeout(function() {
 
-            for(var i = (2; i >= 0; i--) {
-                resarr[i].className = className;
+            for(var i = samples.length; i >0; i--) {
+                resarr[i].className = state;
             }
 
         },500);
@@ -84,7 +101,7 @@ var amt=0
 
 
      var endy=function (){
-        if(amt==8){
+        if(amt===8){
             clearInterval(inter)
             lastw.innerHTML="You win!!!"
         }
