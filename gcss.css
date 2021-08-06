@@ -11,15 +11,9 @@ h1{
     color: #fff4f4;
     font-size: 45px;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
-#iset{
-    width: 700px;
-}
-    #iset::after {
-     content: "";
-     display: table;
-     clear: both;
- }
 
 
 
@@ -28,6 +22,16 @@ body{
 }
 
 
+
+p{
+     color: #fff4f4;
+     font-size: 90px;
+     text-align: center;
+     font-family: "Shadows into light";
+
+    margin: 0;
+    padding: 0;
+ }
 
 div[data-view="image"] {
 
@@ -72,7 +76,7 @@ div[data-view="image"] {
     margin: 10px 500px 100px 500px;
     padding: 0px 0px 0px 100px;
     background-color: #e8adad;
-    height: 900px;
+    height: 1000px;
     width: 750px;
 
 }
@@ -94,15 +98,13 @@ button{
 .nous{
     transition: 0s;
     transform-style: preserve-3d;
-    position: relative;
-    transform: rotateY(180deg);
+
 }
 .usd {
     opacity: .5;
     cursor: default;
     transform-style: preserve-3d;
-    position: relative;
-    transform: rotateY(0deg);
+
 }
 
 

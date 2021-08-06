@@ -13,7 +13,6 @@ window.onload=function (){
    // var btn=document.getElementById("btn")
     var chsec=document.getElementById("chsec")
     var chmint=document.getElementById("chmint")
-    var scored=document.getElementById("score")
     var sarr=document.getElementById('iset')
 
     var resarr=[]
@@ -32,19 +31,16 @@ window.onload=function (){
 
 
 
-
-  /*  function fysh(objs){
+//Fisher–Yates shuffle
+   function fysh(objs){
     for(let i=objs.length-1;i>=0;i--){
+
         let randp=Math.ceil(Math.random()*(i+1));
-        [objs[i],objs[randp]=objs[randp],objs[i]];
+        [objs[i],objs[randp]]=[objs[randp],objs[i]];
     }
     return objs;
-    }*/
-
-    function fysh(objs){
-        for(var j, x, i = objs.length; i; j = Math.floor(Math.random() * i), x = objs[--i],   objs[i] = objs[j], objs[j] = x);
-        return objs;
     }
+
 
 
 
@@ -83,15 +79,17 @@ var amt=0
             if(resarr[0]===resarr[1]){
 
                 iscorrect("usd");
-                //score+=5
+
                 amt++
                endy();
                 resarr=[];
+
             }
             else{
 
                 iscorrect("nous");
                 resarr=[];
+
             }
         }
         }
@@ -145,5 +143,5 @@ var amt=0
         }
 
     }
+
 }
-scored.innerHTML=score;
